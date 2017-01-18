@@ -1,0 +1,358 @@
+/************************************************
+Main
+************************************************/
+
+a {
+  color: #6aacda;
+  /*position: relative;*/
+}
+
+body {
+  font: 16px/1.5;
+}
+
+/*******************************
+ Navigation
+*******************************/
+
+header {
+  background: #d583ac; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #deb17e, #d583ac); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, white, #d583ac); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #deb17e, #d583ac); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, white, #d583ac); /* Standard syntax */
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  padding-left: 10px;
+  visibility: visible;
+}
+
+nav li {
+  float: left;
+  padding: 10px;
+  border: 1px solid #deb17e;
+  border-radius: 5%;
+  background: white;
+  margin: 10px;
+}
+
+nav li a {
+  color: #81bce5;
+}
+
+nav li:hover {
+  background: #f3db97;
+  cursor: pointer;
+}
+
+/************************************************
+ Main Container
+************************************************/
+
+.main-shirt-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+/********************************************
+Shirt Container & Image Container
+********************************************/
+
+.shirt-container {
+  margin: 25px 15px;
+	position: relative;
+}
+
+.shirt-container .shirt-container-2 {
+	border-left: 3px solid #6aacda;
+  border-right: 3px solid #6aacda;
+  border-top: 3px solid #6aacda;
+  position: relative;
+  width: 100%;
+}
+
+img.shirt-img {
+  padding: 10px;
+  width: 240px;
+}
+
+.shirt-image-container div img {
+	width: 100%
+}
+
+/* Button */
+.button { /* Could use button tag? */
+  background: #fff;
+  border: 3px solid #6aacda;
+  border-radius: 0;
+  color: #6aacda;
+  padding: 5px;
+	position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.button:hover {
+  background: #6aacda;
+	color: white;
+}
+
+/************************************************
+ Icons Container
+************************************************/
+.icon-container {
+  border: 3px solid #6aacda;
+  overflow: hidden;
+  text-align: center;
+}
+
+.icons {
+  border-right: 3px solid #6aacda;
+  color: #6aacda;
+  cursor: pointer;
+  float: left;
+  min-width: 40px;
+  padding: 10px 0;
+  width: 20%;
+}
+
+.icons:hover {
+  background: #6aacda;
+  color: #fff;
+}
+
+/* Upper Case Text */
+.upper {
+  text-transform: uppercase;
+}
+
+.last-icon {
+  border-right: 0 solid blue;
+}
+
+/*******************************
+ Icon Heart - JS
+*******************************/
+.icons:nth-child(2):active .heart-on {
+  color: #6aacda;
+}
+
+.heart-off {
+  color: #e476a8;
+}
+
+/*******************************
+ Icon Sizes
+*******************************/
+
+/* Shirt size hover effects */
+.icons:nth-child(3):hover .icon-size {
+  background: #ccc;
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/* Submenu Transition */
+.icon-size {
+  background: #fff;
+  border: 2px solid #6aacda;
+  bottom: 90px;
+  color: #333;
+  height: 165px;
+  opacity: 0;
+  padding: 5px 2px;
+  position: absolute;
+  transform: translate(-1500px, 0);
+  transition: opacity 1s ease, transform 1s ease;
+  transition: background 3s ease;
+  width: 50px;
+}
+
+/* Arrow */
+.icon-size:after {
+  border: 8px solid transparent;
+  border-top-color: #6aacda;
+  bottom: -17px;
+  content: " ";
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 15px;
+  left: 200px
+  width: 0;
+}
+
+/* Mini Shirt */
+.mini-shirt {
+  padding: 2px 0;
+}
+/* Mini Shirt Positioning */
+.extra-large img {
+  height: auto;
+  width: 40px;
+}
+
+.large img {
+  height: auto;
+  width: 35px;
+}
+
+.medium img {
+  height: auto;
+  width: 30px;
+}
+
+.small img {
+  height: auto;
+  width: 27px;
+}
+.size-logo-cont, .size-logo-cont-small {
+  position: relative;
+}
+
+.size-logo {
+  color: #6aacda;
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  right: 18px;
+  top: 12px;
+}
+
+.size-logo-cont-small .size-logo {
+  right: 17.5px;
+  top: 9px;
+}
+
+/*******************************
+ Icon Color Squares
+*******************************/
+
+/* Shirt Color Hidden Effect */
+.icons:nth-child(4):hover .icon-color {
+  background: #ccc;
+  opacity: 1;
+  transform: translate(0,0);
+}
+/* Icon Color */
+.icon-color {
+  background: #fff;
+  border: 2px solid #6aacda;
+  bottom: 90px;
+  color: white;
+  height: 100px;
+  margin: 0 auto;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  transform: translate(-1500px, 0 );
+  transition: opacity 1s ease, transform 1s ease;
+  transition: background 3s ease;
+  width: 100px;
+
+}
+/* Arrow */
+.icon-color:after {
+  border: 8px solid transparent;
+  border-top-color: #6aacda;
+  bottom: -17px;
+  content: " ";
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 42px;
+  width: 0;
+}
+/* Square Color & Positioning */
+td .little-square {
+  border-radius: 3px;
+  height: 36px;
+  margin: 3px;
+  width: 36px;
+}
+.red {
+  background: #e476a8;
+}
+.blue {
+  background: #72bbe9;
+}
+.orange {
+  background: #e2af76;
+}
+.green {
+  background: #289d4c;
+}
+
+/************************************************
+ Start Shirt Info
+************************************************/
+.shirt-info {
+  overflow: hidden;
+  padding: 5px;
+}
+
+.shirt-logo-name {
+  color: #6aacda;
+  float: left;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 5px 3px 3px 3px;
+}
+
+.shirt-cost {
+  color: #6aacda;
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 3px 3px 3px;
+
+}
+
+.shirt-cost::before {
+  content: '$';
+}
+
+/*******************************
+ MEDIA QUERIES
+*******************************/
+/* Small Screen */
+@media screen and (max-width: 449px) {
+  nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 450px) {
+  .shirt-container {
+    width: 95%;
+  }
+}
+
+/* Medium-Small Screen */
+@media screen and (min-width: 550px) {
+  .shirt-container {
+    width: 40%;
+  }
+  .icons {
+    min-width: 30px;
+    width: 20%;
+  }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 970px) {
+  .shirt-container {
+    width: 22%;
+  }
+}
+
+/************************************************
+ Main Container Ends
+************************************************/
